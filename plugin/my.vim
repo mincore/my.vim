@@ -60,6 +60,10 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp936,big5,gb2312
 set fileformats=unix,dos
 
+" autoread
+set autoread
+au CursorHold * checktime
+
 " doubleword backspace
 if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
     set ambiwidth=double
