@@ -73,8 +73,8 @@ endif
 set pastetoggle=<F10>
 
 " set leader to ,
-let mapleader=","
-let g:mapleader=","
+let mapleader=" "
+let g:mapleader=" "
 
 " keymaps
 nmap <leader>/ :nohl<CR>
