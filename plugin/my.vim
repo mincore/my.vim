@@ -73,8 +73,8 @@ endif
 set pastetoggle=<F10>
 
 " set leader to ,
-let mapleader=" "
-let g:mapleader=" "
+let mapleader=","
+let g:mapleader=","
 
 " keymaps
 nmap <leader>/ :nohl<CR>
@@ -197,7 +197,18 @@ func Make()
         let l:count = l:count + 1
 	endwhile
 endfunc
-nmap <leader>m :call Make()<CR>
+nmap <silent><leader>m :call Make()<CR>
 
 "==============================================
 set tags=$HOME/.tags/tags
+
+" my.vim
+set path=~/.vim/plugged/my.vim/bin
+func Gtags()
+    if filereadable("./GTAGS")
+        return
+    endif
+    let l:ret = system('gtags')
+    exec 'GtagsCscope'
+endfunc
+nmap <silent><leader>g :call Gtags()<CR>
