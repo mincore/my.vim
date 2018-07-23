@@ -247,10 +247,10 @@ function! s:GtagsCscope()
             ":nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 	endif
 	" tag command
-	:nmap <C-\><C-n> :tn<CR>
-	:nmap <C-\><C-p> :tp<CR>
-	:nmap <C-n> :cn<CR>
-	:nmap <C-p> :cp<CR>
+	":nmap <C-\><C-n> :tn<CR>
+	":nmap <C-\><C-p> :tp<CR>
+	":nmap <C-n> :cn<CR>
+	":nmap <C-p> :cp<CR>
 	" Context search. See the --from-here option of global(1).
 	:nmap <C-\><C-\><C-]> :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
 	:nmap <2-LeftMouse>   :cs find d <C-R>=expand("<cword>")<CR>:<C-R>=line('.')<CR>:%<CR>
